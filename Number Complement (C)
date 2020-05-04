@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<math.h>
+
+int findComplement(int num){
+    int number_of_bits;
+    number_of_bits = (int)(floor(log(num) / log(2))) + 1;
+    int i;
+    for(i = 0; i<number_of_bits; i++) {
+        num = num^(1<<i);
+    }
+    return num;
+}
