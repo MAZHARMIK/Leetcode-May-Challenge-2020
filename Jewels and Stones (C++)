@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int numJewelsInStones(string J, string S) {
+        set<char> s;
+
+        for(auto ch: J) { //The letters in J are guaranteed distinct
+            s.insert(ch);
+        }
+        
+        int countOfJewels = 0;
+        for(auto ch: S) {
+            if(s.find(ch) != s.end())
+                countOfJewels++;
+        }
+        
+        return countOfJewels;
+        
+    }
+};
