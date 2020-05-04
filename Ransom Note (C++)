@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+class Solution {
+public:
+    bool canConstruct(string ransomNote, string magazine) {
+        if(magazine.length() < ransomNote.length())
+            return false;
+        sort(ransomNote.begin(), ransomNote.end());
+        sort(magazine.begin(), magazine.end());
+        int j = 0, i=0;
+        for(; i<ransomNote.length();) {
+            if(ransomNote[i] == magazine[j]) {
+                i++;
+            }
+            j++;
+            if(j>magazine.length()) break;
+        }
+        if(i==ransomNote.length())
+            return true;
+        return false;
+    }
+};
