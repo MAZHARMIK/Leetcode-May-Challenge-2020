@@ -1,0 +1,22 @@
+class Solution {
+public:
+    bool canConstruct(string ransomNote, string magazine) {
+        if(magazine.length() < ransomNote.length())
+            return false;
+    
+        map<char, int> ransomNoteMap; 
+        for (int i = 0; ransomNote[i]!='\0'; i++) 
+            ransomNoteMap[ransomNote[i]] = (ransomNoteMap[ransomNote[i]] + 1);
+
+        map<char, int> magazineMap; 
+        for (int i = 0; magazine[i]!='\0'; i++) 
+            magazineMap[magazine[i]] = (magazineMap[magazine[i]] + 1);
+
+        for (auto it : ransomNoteMap) {
+            if(it.second > magazineMap[it.first])
+                return false;
+        }
+
+        return true;
+    }
+};
