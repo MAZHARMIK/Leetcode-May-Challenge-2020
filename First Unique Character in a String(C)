@@ -1,0 +1,16 @@
+int firstUniqChar(char * s){
+    int alphaArray[123], i;
+    
+    for(i = 97; i<123; i++)
+        alphaArray[i] = 0;
+    
+    for(i=0 ; s[i]!= '\0'; i++){
+    	alphaArray[(int)s[i]] += 1;
+    }
+    
+    for(i=0 ; s[i]!= '\0'; i++){
+    	if(alphaArray[(int)s[i]] == 1)
+    		return i;
+    }
+    return -1;
+}
