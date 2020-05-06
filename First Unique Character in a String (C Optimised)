@@ -1,5 +1,5 @@
 int firstUniqChar(char * s){
-    int alphaArray[123] = {0}, i;
+    int alphaArray[123] = {0}, i; //simplifying
     
     for(i=0 ; s[i]!= '\0'; i++){
     	alphaArray[(int)s[i]] += 1;
