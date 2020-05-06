@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int i;
+        int majority_limit = floor(nums.size()/2);
+        map<int, int> myMap;
+        for(i = 0; i<nums.size(); i++) {
+        	myMap.insert(pair<int, int>(nums[i], 0));
+        }
+        
+        for(i = 0; i<nums.size(); i++) {
+        	myMap[nums[i]]++;
+        	if(myMap[nums[i]] > majority_limit)
+        		break;
+        }
+        return nums[i];
+    }
+};
