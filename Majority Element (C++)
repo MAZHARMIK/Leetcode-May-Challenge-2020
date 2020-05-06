@@ -1,18 +1,19 @@
-class Solution {
-public:
-    int majorityElement(vector<int>& nums) {
-        int i;
-        int majority_limit = floor(nums.size()/2);
-        map<int, int> myMap;
-        for(i = 0; i<nums.size(); i++) {
-        	myMap.insert(pair<int, int>(nums[i], 0));
-        }
+int majorityElement(vector<int>& nums) {
+        if(nums.size() == 1)
+        	return nums[0];  //if there is only one element, that's the majority element
+        int i, majority_element, majority_limit = floor(nums.size()/2);
         
+        map<int, int> myMap;   
         for(i = 0; i<nums.size(); i++) {
-        	myMap[nums[i]]++;
-        	if(myMap[nums[i]] > majority_limit)
-        		break;
+            if(myMap.count(nums[i])) { //if element is already present, just increment it's count and sompare with majority_limit
+            	myMap[nums[i]]++;
+        	    if(myMap[nums[i]] > majority_limit) {
+                    majority_element = nums[i];
+        		    break;
+                }
+            } else {
+                myMap.insert(pair<int, int>(nums[i], 1)); //else add the element with count 1 initially
+            }
         }
-        return nums[i];
-    }
-};
+        return majority_element;
+}
