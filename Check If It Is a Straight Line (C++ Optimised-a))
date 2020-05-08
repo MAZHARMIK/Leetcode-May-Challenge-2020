@@ -1,3 +1,4 @@
+//O(n/2)
 bool checkStraightLine(vector<vector<int>>& coordinates) {
        int num_points = coordinates.size();
        float slope_of_first_two;
