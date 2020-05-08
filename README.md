@@ -41,7 +41,7 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
 			</tr>
       <tr>
 			  <td>Check If It Is a Straight Line (C++ Optimised-a)</td>
-        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Check%20If%20It%20Is%20a%20Straight%20Line%20(C++%20Optimised-a))"></a><img src="https://www.themathpage.com/aPreCalc/Pre_Img/B5.png" width="400" height="150"></td>
+        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Check%20If%20It%20Is%20a%20Straight%20Line%20(C++%20Optimised-a))"><img src="https://www.themathpage.com/aPreCalc/Pre_Img/B5.png" width="400" height="150"></a></td>
 			</tr>
 		</tbody>
 </table>
