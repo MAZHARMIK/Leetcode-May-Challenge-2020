@@ -1,0 +1,26 @@
+bool checkStraightLine(vector<vector<int>>& coordinates) {
+       int num_points = coordinates.size();
+       float slope_of_first_two;
+        if(coordinates[1][0] - coordinates[0][0] == 0)
+        	slope_of_first_two = INT_MAX;
+        else
+        	slope_of_first_two = ((float)((float)coordinates[1][1] - (float)coordinates[0][1]))/((float)((float)coordinates[1][0] - (float)coordinates[0][0]));
+        float slope;
+        for(int i = 2; i<=num_points-2; i+=2) {
+        	if(coordinates[i+1][0] - coordinates[i][0] == 0)
+        		slope = INT_MAX;
+        	else	
+            	slope = (coordinates[i+1][1] - coordinates[i][1])/(coordinates[i+1][0] - coordinates[i][0]);
+          if (slope != slope_of_first_two)
+            return false;
+        }
+        if(num_points%2 !=0) {
+        	if((coordinates[num_points-1][0] - coordinates[num_points-2][0]) == 0) {
+        		slope = INT_MAX;
+        	} else
+        		slope = (coordinates[num_points-1][1] - coordinates[num_points-2][1])/(coordinates[num_points-1][0] - coordinates[num_points-2][0]);
+        	if (slope != slope_of_first_two)
+            	return false;
+        }
+        return true;
+    }
