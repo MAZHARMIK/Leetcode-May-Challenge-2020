@@ -5,7 +5,7 @@ int majorityElement(vector<int>& nums) {
         
         map<int, int> myMap;   
         for(i = 0; i<nums.size(); i++) {
-            if(myMap.count(nums[i])) { //if element is already present, just increment it's count and sompare with majority_limit
+            if(myMap.count(nums[i])) { //if element is already present, just increment it's count and compare with majority_limit
             	myMap[nums[i]]++;
         	    if(myMap[nums[i]] > majority_limit) {
                     majority_element = nums[i];
