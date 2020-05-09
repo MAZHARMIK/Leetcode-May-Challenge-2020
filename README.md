@@ -43,5 +43,9 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
 			  <td>Check If It Is a Straight Line (C++ Optimised-a)</td>
         <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Check%20If%20It%20Is%20a%20Straight%20Line%20(C++%20Optimised-a))"><img src="https://www.themathpage.com/aPreCalc/Pre_Img/B5.png" width="400" height="150"></a></td>
 			</tr>
+	<tr>
+			  <td>Valid Perfect Square (C++)</td>
+        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Valid%20Perfect%20Square%20(C%2B%2B)"><img src="https://s3.amazonaws.com/www.mathnasium.com/upload/696/images/square%20root%20of%202.png" width="400" height="150"></a></td>
+			</tr>
 		</tbody>
 </table>
