@@ -4,6 +4,9 @@ public:
         unsigned int i;
         if(num==1 || num==0)
             return true;
+        //Any number that ends in 2, 3, 7 or 8 is not a perfect square. 
+        if(num%10 == 2 || num%10 == 3 || num%10 == 7 || num%10 == 8)
+            return false;
         for(i=2;i<=num/2;i++) {
             if(i*i == num)
                 return true;
