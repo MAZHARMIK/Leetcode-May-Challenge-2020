@@ -1,0 +1,18 @@
+int findJudge(int N, vector<vector<int>>& trust) {
+		if(N==1)
+			return 1;
+        int count_array[N+1];
+        for (int i=0; i<=N; i++) {
+            count_array[i] = 0;
+        }
+        for (int i=0; i<trust.size(); i++) {
+        	count_array[trust[i][0]]--;
+        	count_array[trust[i][1]]++;
+        }
+        
+        for(int i = 1; i<=N; i++) {
+        	if(count_array[i] == N-1)
+        		return i;
+        }
+        return -1;
+    }
