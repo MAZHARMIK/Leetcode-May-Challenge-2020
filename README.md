@@ -47,5 +47,9 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
 			  <td>Valid Perfect Square (C++)</td>
         <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Valid%20Perfect%20Square%20(C%2B%2B)"><img src="https://s3.amazonaws.com/www.mathnasium.com/upload/696/images/square%20root%20of%202.png" width="400" height="150"></a></td>
 			</tr>
+		<tr>
+			  <td>Find the Town Judge (C++ simplified)</td>
+        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Find%20the%20Town%20Judge%20(C%2B%2B%20simplified)"><img src="https://redinlawschool.files.wordpress.com/2016/06/1colormesuspicioiuscolcp.jpg" width="400" height="150"></a></td>
+			</tr>
 		</tbody>
 </table>
