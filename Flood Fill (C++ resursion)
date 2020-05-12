@@ -4,34 +4,34 @@ public:
         if(image[sr][sc] == initial_color) {
             image[sr][sc] = newColor;
         }
-        for (int i = sr; i < image.size(); i++) { 
-            for (int j = sc; j < image[i].size(); j++) {
-                if((i+1 < image.size()) && image[i+1][j] != newColor) {
-                    if(image[i+1][j] == initial_color) {
-                        modify4Directionally(image, i+1, j, newColor, initial_color);
-                    }
-                }
-                if((i-1 >= 0) && image[i-1][j] != newColor) {
-                    if(image[i-1][j] == initial_color) {
-                        modify4Directionally(image, i-1, j, newColor, initial_color);
-                    }
-                }
-                if((j+1 < image[i].size()) && image[i][j+1] != newColor) {
-                    if(image[i][j+1] == initial_color) {
-                        modify4Directionally(image, i, j+1, newColor, initial_color);
-                    }
-                }
-                if((j-1 >= 0) && image[i][j-1] != newColor) {
-                    if(image[i][j-1] == initial_color) {
-                        modify4Directionally(image, i, j-1, newColor, initial_color);
-                    }
-                }
-                return;
+
+        if((sr+1 < image.size()) && image[sr+1][sc] != newColor) {
+            if(image[sr+1][sc] == initial_color) {
+                modify4Directionally(image, sr+1, sc, newColor, initial_color);
             }
-        } 
+        }
+        if((sr-1 >= 0) && image[sr-1][sc] != newColor) {
+            if(image[sr-1][sc] == initial_color) {
+                modify4Directionally(image, sr-1, sc, newColor, initial_color);
+            }
+        }
+        if((sc+1 < image[sr].size()) && image[sr][sc+1] != newColor) {
+            if(image[sr][sc+1] == initial_color) {
+                modify4Directionally(image, sr, sc+1, newColor, initial_color);
+            }
+        }
+        if((sc-1 >= 0) && image[sr][sc-1] != newColor) {
+            if(image[sr][sc-1] == initial_color) {
+                modify4Directionally(image, sr, sc-1, newColor, initial_color);
+            }
+        }
+        return;
+
     }
     
     vector<vector<int>> driver(vector<vector<int>>& image, int sr, int sc, int newColor) {
+        if(image[sr][sc] == newColor)
+            return image;
         int initial_color = image[sr][sc];
         modify4Directionally(image, sr, sc, newColor, initial_color);
         return image;
