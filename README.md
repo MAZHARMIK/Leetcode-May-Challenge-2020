@@ -56,7 +56,7 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
         <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Flood%20Fill%20(C%2B%2B%20resursion)"><img src="https://3.bp.blogspot.com/-mkiULhyYO5E/WJHa3EjJXnI/AAAAAAAAAiY/u3QzeNqmAvUi8ar8ehpfPnKVieXxLk_7wCLcB/s1600/neighbourhoods.gif" width="400" height="150"></a></td>
 			</tr>
 			<tr>
-			  <td>Flood Fill (C++ recursion)</td>
+			  <td>Single Element in a Sorted Array(C++)</td>
         <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Single%20Element%20in%20a%20Sorted%20Array%20(C%2B%2B)"><img src="https://4.bp.blogspot.com/-NTCKzRbiEGQ/WtQ_0gqp4JI/AAAAAAAAJkY/fsKZmCCS8DALHYwA_sZ_ne1rV-EvXQR3QCLcBGAs/s1600/unique%2Belement%2Bin%2Bthe%2Barray.png" width="400" height="150"></a></td>
 			</tr>
 		</tbody>
