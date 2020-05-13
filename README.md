@@ -59,5 +59,9 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
 			  <td>Single Element in a Sorted Array(C++)</td>
         <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Single%20Element%20in%20a%20Sorted%20Array%20(C%2B%2B)"><img src="https://4.bp.blogspot.com/-NTCKzRbiEGQ/WtQ_0gqp4JI/AAAAAAAAJkY/fsKZmCCS8DALHYwA_sZ_ne1rV-EvXQR3QCLcBGAs/s1600/unique%2Belement%2Bin%2Bthe%2Barray.png" width="400" height="150"></a></td>
 			</tr>
+			<tr>
+			  <td>Remove K Digits (C++)</td>
+        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Remove%20K%20Digits%20(C%2B%2B)"><img src="https://www.tutsmake.com/wp-content/uploads/2020/05/Python-Remove-Character-From-String.jpeg" width="400" height="150"></a></td>
+			</tr>
 		</tbody>
 </table>
