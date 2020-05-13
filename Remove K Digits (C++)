@@ -1,0 +1,53 @@
+class Solution {
+public:
+    string removeKdigits(string num, int k) {
+      int length = num.length();
+    if(length == 0)
+        return "";
+
+    stack<char> my_stack;
+    my_stack.push(num[0]);
+    int i = 1;
+    for(;i <length && k; i++) {
+        int num_top  = my_stack.top() - 48;
+        int next_num = num[i] - 48;
+        while(next_num < num_top && k>0){
+            my_stack.pop();
+            k--;
+            if(my_stack.empty())
+                break;
+            num_top = my_stack.top() - 48;
+        }
+        my_stack.push(num[i]);
+    }
+    while(i < length) {
+        my_stack.push(num[i]);
+        i++;
+    }
+    while(k>0) {
+        my_stack.pop();
+        k--;
+    }
+
+    string temp_result = "";
+    while (!my_stack.empty()) {
+        temp_result += my_stack.top();
+        my_stack.pop();
+    }
+    reverse(temp_result.begin(), temp_result.end());
+    //we also have to remove leading '0's
+    string result = "";
+    int j = 0;
+    while(temp_result[j]=='0'){
+        j++;
+    }
+    while(temp_result[j]!='\0'){
+        result += temp_result[j];
+        j++;
+    }
+    if(result=="")
+        return "0";
+
+    return result;
+    }
+};
