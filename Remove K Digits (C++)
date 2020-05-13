@@ -1,10 +1,11 @@
 class Solution {
 public:
     string removeKdigits(string num, int k) {
-      int length = num.length();
+     int length = num.length();
     if(length == 0)
         return "";
-
+    if(length == k)
+        return "0";
     stack<char> my_stack;
     my_stack.push(num[0]);
     int i = 1;
@@ -36,18 +37,15 @@ public:
     }
     reverse(temp_result.begin(), temp_result.end());
     //we also have to remove leading '0's
-    string result = "";
+
     int j = 0;
     while(temp_result[j]=='0'){
         j++;
     }
-    while(temp_result[j]!='\0'){
-        result += temp_result[j];
-        j++;
-    }
-    if(result=="")
+    temp_result.erase(0, j);
+    if(temp_result=="")
         return "0";
 
-    return result;
+    return temp_result;
     }
 };
