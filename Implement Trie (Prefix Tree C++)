@@ -1,0 +1,64 @@
+struct myTrie 
+{ 
+    struct myTrie *children[26]; 
+    bool isEndOfWord; 
+};
+class Trie {
+public:
+    /** Initialize your data structure here. */
+    struct myTrie* root;
+    Trie() {
+        root = new myTrie();
+        root->isEndOfWord = false;
+        for (int i = 0; i < 26; i++) {
+			root->children[i] = NULL;
+		}
+    }
+    
+    /** Inserts a word into the trie. */
+    void insert(string word) {
+        struct myTrie *myTrieIterator = root; 
+        for (int i = 0; i < word.length(); i++) { 
+            int index = word[i] - 'a'; 
+            if (!myTrieIterator->children[index]) 
+                myTrieIterator->children[index] = new myTrie(); 
+            myTrieIterator = myTrieIterator->children[index]; 
+        } 
+        myTrieIterator->isEndOfWord = true; 
+    }
+    
+    /** Returns if the word is in the trie. */
+    bool search(string word) {
+        struct myTrie *myTrieIterator = root; 
+        for (int i = 0; i < word.length(); i++) { 
+            int index = word[i] - 'a'; 
+            if (!myTrieIterator->children[index]) 
+                return false; 
+            myTrieIterator = myTrieIterator->children[index]; 
+        }
+        return (myTrieIterator != NULL && myTrieIterator->isEndOfWord); 
+    }
+    
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    bool startsWith(string prefix) {
+        struct myTrie *myTrieIterator = root;
+        int i = 0;
+        for (i = 0; i < prefix.length(); i++) { 
+            int index = prefix[i] - 'a'; 
+            if (!myTrieIterator->children[index]) 
+                return false; 
+            myTrieIterator = myTrieIterator->children[index]; 
+        }
+        if(i==prefix.length())
+            return true;
+        return false;
+    }
+};
+
+/**
+ * Your Trie object will be instantiated and called as such:
+ * Trie* obj = new Trie();
+ * obj->insert(word);
+ * bool param_2 = obj->search(word);
+ * bool param_3 = obj->startsWith(prefix);
+ */
