@@ -63,5 +63,9 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
 			  <td>Remove K Digits (C++)</td>
         <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Remove%20K%20Digits%20(C%2B%2B)"><img src="https://www.tutsmake.com/wp-content/uploads/2020/05/Python-Remove-Character-From-String.jpeg" width="400" height="150"></a></td>
 			</tr>
+			<tr>
+			  <td>Remove K Digits (C++)</td>
+        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Implement%20Trie%20(Prefix%20Tree%20C%2B%2B)"><img src="https://simpledevcode.files.wordpress.com/2018/12/trie02.gif" width="400" height="150"></a></td>
+			</tr>
 		</tbody>
 </table>
