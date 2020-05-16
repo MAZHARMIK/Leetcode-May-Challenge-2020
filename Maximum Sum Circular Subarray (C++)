@@ -1,44 +1,28 @@
 class Solution {
 public:
-
-    int maxCircularSum(vector<int>& a, int n) 
-    { 
-        int maximum_so_far_value = maximum_so_far(a, n);  
-        int max_value_rotate = 0;
-        for (int i = 0; i < n; i++) 
-        { 
-                max_value_rotate += a[i];
-                a[i] = -a[i];
-        } 
-
-        max_value_rotate = max_value_rotate + maximum_so_far(a, n); 
-
-        return (max_value_rotate > maximum_so_far_value)? max_value_rotate: maximum_so_far_value; 
-    } 
-
-    int maximum_so_far(vector<int>& a, int n) 
-    { 
-        //this is kadane's algorithm
-        int sum = a[0];
-        int max_sum = a[0]; 
-        for (int i = 1; i < n; i++) 
-        { 
-            sum = max(sum + a[i], a[i]);
-            max_sum = max(sum, max_sum);
-        } 
-        return max_sum; 
-    }  
-
     int maxSubarraySumCircular(vector<int>& A) {
-        int result_max_negative_array = INT_MIN;
-        for(int i = 0; i<A.size(); i++){
-            if(A[i] < 0) {
-                result_max_negative_array = max(A[i], result_max_negative_array);
-            }
-            else
-                return maxCircularSum(A, A.size());
+        //variables: kadane's for max_sum
+        int maxSum = A[0];
+        int sum_max = A[0];
+
+        //variables: kadane's for min_sum
+        int minSum  = A[0];
+        int sum_min = A[0];
+
+        //Total Sum
+        int total_sum = A[0];
+        for(int i = 1; i< A.size(); i++){
+            sum_max = max(sum_max+A[i], A[i]);
+            maxSum = max(sum_max, maxSum);
+
+            sum_min = min(sum_min+A[i], A[i]);
+            minSum  = min(sum_min, minSum);
+
+            total_sum += A[i];
         }
-        return result_max_negative_array;
-        
+        int circular_max_sum = (total_sum - minSum);
+        if(circular_max_sum > maxSum && circular_max_sum != 0)
+            return circular_max_sum;
+        return maxSum;
     }
 };
