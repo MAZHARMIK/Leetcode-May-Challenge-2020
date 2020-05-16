@@ -69,7 +69,7 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
 			</tr>
 			<tr>
 			  <td>Maximum Sum Circular Subarray</td>
-        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Maximum%20Sum%20Circular%20Subarray%20(C%2B%2B)"><img src="https://www.mycertnotes.com/wp-content/uploads/2017/07/maximum-subarray.png" width="400" height="150"></a></td>
+        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Maximum%20Sum%20Circular%20Subarray%20(C%2B%2B)"><img src="https://i.ytimg.com/vi/iS7z5zrim38/maxresdefault.jpg" width="400" height="150"></a></td>
 			</tr>
 		</tbody>
 </table>
