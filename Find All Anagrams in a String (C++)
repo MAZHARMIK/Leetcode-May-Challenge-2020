@@ -1,0 +1,47 @@
+class Solution {
+public:
+    vector<int> findAnagrams(string s, string p) {
+        vector<int> my_vec;
+    if(s.length() == 0) return my_vec;
+    if(p.length() > s.length()) return my_vec;
+    int pattern_tracker[26] = {0};
+    for(char ch:p)
+        pattern_tracker[ch-'a']++;
+
+    int start_index = 0;
+    int end_index = (p.length()-1);
+    bool match_anagram = true;
+
+    for(int i=0; i<p.length(); i++)
+        pattern_tracker[s[i] - 'a']--;
+    for(int i:pattern_tracker){
+        if(i!=0){
+            match_anagram = false;
+            break;
+        }
+    }
+    if(match_anagram)
+        my_vec.push_back(start_index);
+    start_index++;
+    end_index++;
+    while(end_index < s.length()){
+        char curr_char = s[start_index-1];
+        pattern_tracker[curr_char - 'a']++;
+        pattern_tracker[s[end_index] - 'a']--;
+        match_anagram = true;
+        for(int i:pattern_tracker){
+            if(i!=0){
+                match_anagram = false;
+                break;
+            }
+        }
+
+        if(match_anagram){
+            my_vec.push_back(start_index);
+        }
+        start_index++;
+        end_index++;
+    }
+return my_vec;
+    }
+};
