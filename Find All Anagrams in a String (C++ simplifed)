@@ -1,0 +1,42 @@
+class Solution {
+public:
+    vector<int> findAnagrams(string s, string p) {
+       vector<int> my_vec;
+        if(s[0] == '\0' || s.length() == 0)
+            return my_vec;
+
+        int pattern_char_freq[26] = {0};
+        for(char ch:p)
+            pattern_char_freq[ch-'a']++;
+
+        int patternLength = p.length();
+        int left = 0;
+        int right = 0;
+        int count = patternLength;
+
+        while(right < s.length()){
+            char curr_char = s[right];
+            if(pattern_char_freq[curr_char-'a'] >= 1){
+                count--;
+            }
+            pattern_char_freq[curr_char-'a']--;
+            right++;
+
+            if(count == 0){
+                my_vec.push_back(left);
+            }
+
+            if(right-left == patternLength){
+                if(pattern_char_freq[s[left] - 'a']>=0){
+                    count++;
+                }
+                char prev_char = s[left];
+                pattern_char_freq[prev_char - 'a']++;
+                left++;
+            }
+
+        }
+        return my_vec;
+        
+    }
+};
