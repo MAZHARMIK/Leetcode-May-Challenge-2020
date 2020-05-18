@@ -1,0 +1,34 @@
+class Solution {
+public:
+    bool checkInclusion(string s1, string s2) {
+        if(s2.length() == 1)
+            return s1==s2;
+
+        int freq[26] = {0};
+        for(char ch:s1)
+            freq[ch-'a']++;
+
+        int left = 0;
+        int right = 0;
+        int count = s1.length();
+
+        while(right < s2.length()){
+            if(freq[s2[right] - 'a'] >= 1){
+                count--;
+            }
+            freq[s2[right] - 'a']--;
+            right++;
+
+            if(count==0)
+                return true;
+
+            if((right - left) == s1.length()){
+                if(freq[s2[left]-'a'] >= 0)
+                    count++;
+                freq[s2[left]-'a']++;
+                left++;
+            }
+        }
+        return false;
+    }
+};
