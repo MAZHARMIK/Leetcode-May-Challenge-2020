@@ -83,5 +83,9 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
 			  <td>Permutation in String</td>
         <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Permutation%20in%20String%20(C%2B%2B)"><img src="https://2.bp.blogspot.com/-w-D29UqS_xE/WUIiKBk9hsI/AAAAAAAAAI0/TRD_PjJ7e54EgWZKPlxEzGxsW3CdUD9gQCLcBGAs/s1600/image.JPG" width="400" height="150"></a></td>
 			</tr>
+			<tr>
+			  <td>Online Stock Span</td>
+        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Online%20Stock%20Span%20(C%2B%2B)"><img src="https://algorithmsandme.com/wp-content/uploads/2014/02/stock-span-problem-1.png" width="400" height="150"></a></td>
+			</tr>
 		</tbody>
 </table>
