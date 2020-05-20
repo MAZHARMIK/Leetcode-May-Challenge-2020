@@ -88,7 +88,7 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
         <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Online%20Stock%20Span%20(C%2B%2B)"><img src="https://algorithmsandme.com/wp-content/uploads/2014/02/stock-span-problem-1.png" width="400" height="150"></a></td>
 			</tr>
 			<tr>
-			  <td>Online Stock Span</td>
+			  <td>Kth Smallest Element in a BST</td>
         <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Kth%20Smallest%20Element%20in%20a%20BST%20(C%2B%2B)"><img src="http://cppbetterexplained.com/wp-content/uploads/2016/02/binary-search-tree-diagram.png" width="400" height="150"></a></td>
 			</tr>
 		</tbody>
