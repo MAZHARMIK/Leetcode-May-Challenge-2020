@@ -1,0 +1,33 @@
+class Solution {
+public:
+    int totalSquares(vector<vector<int>>& matrix, int i, int j, vector<vector<int>>& memoization){
+        if(i<0) return 0;
+        if(j < 0) return 0;
+        if(i>=matrix.size()) return 0;
+        if(j>=matrix[0].size()) return 0;
+        if(matrix[i][j] == 0) return 0;
+        if(memoization[i][j]!=0) return memoization[i][j];
+        int sum = 0;
+        int right = totalSquares(matrix, i, j+1, memoization);
+        int down = totalSquares(matrix, i+1, j, memoization);
+        int diag = totalSquares(matrix, i+1, j+1, memoization);
+        sum = 1 + min(right, min(down, diag));
+        memoization[i][j] = sum;
+        return memoization[i][j];
+        
+    }
+    int countSquares(vector<vector<int>>& matrix) {
+        int number_of_squares = 0;
+        int rows = matrix.size();
+        int columns = matrix[0].size();
+        vector<vector<int>> memoization(rows, vector<int>(columns));
+        for(int i = 0; i<rows; i++){
+            for(int j = 0; j<columns; j++)
+            {
+                if(matrix[i][j] == 1)
+                    number_of_squares += totalSquares(matrix, i, j, memoization);
+            }
+        }
+        return number_of_squares;
+    }
+};
