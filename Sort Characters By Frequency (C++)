@@ -1,6 +1,9 @@
 class Solution {
 public:
 
+static bool myfunction(pair<char, int>& left, pair<char, int>& right){ 
+    return left.second > right.second; 
+}
 string  frequencySort(string s){
     string result = "";
     map<char,int> my_map;
@@ -11,9 +14,7 @@ string  frequencySort(string s){
             my_map.insert({ch, 1});
     }
     vector<pair<char, int>> my_vec(my_map.begin(), my_map.end());
-    sort(my_vec.begin(), my_vec.end(), [](pair<char, int>& left, pair<char, int>& right){
-            return left.second > right.second;
-         });
+    sort(my_vec.begin(), my_vec.end(), myfunction);
 
 
 
