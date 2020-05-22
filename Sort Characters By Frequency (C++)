@@ -1,0 +1,28 @@
+class Solution {
+public:
+
+string  frequencySort(string s){
+    string result = "";
+    map<char,int> my_map;
+    for(char ch:s){
+        if(my_map.count(ch))
+            my_map[ch]++;
+        else
+            my_map.insert({ch, 1});
+    }
+    vector<pair<char, int>> my_vec(my_map.begin(), my_map.end());
+    sort(my_vec.begin(), my_vec.end(), [](pair<char, int>& left, pair<char, int>& right){
+            return left.second > right.second;
+         });
+
+
+
+    for (auto const &pair: my_vec) {
+            int counter = pair.second;
+            while(counter--)
+                result += pair.first;
+	}
+
+return result;
+}
+};
