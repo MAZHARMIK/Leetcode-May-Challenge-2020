@@ -1,0 +1,35 @@
+class Solution {
+public:
+    vector<vector<int>> intervalIntersection(vector<vector<int>>& left, vector<vector<int>>& right) {
+        if(left.size() == 0)return left;
+        if(right.size() == 0) return right;
+        vector<vector<int>> vec;
+
+        int l = 0;  int leftSize  = left.size();
+        int r = 0;  int rightSize = right.size();
+        int v = 0;
+
+         while(l<leftSize && r<rightSize){
+            int leftFirst   = left[l][0];
+            int leftSecond  = left[l][1];
+            int rightFirst  = right[r][0];
+            int rightSecond = right[r][1];
+             //we just have to choose max of firsts of A and B and min of seconds of A and B
+            int maxFirst = max(rightFirst, leftFirst);
+            int minSecond = min(leftSecond,rightSecond);
+            
+            //insert them only if they are in ascending order else they are not valid
+            if(maxFirst <= minSecond)
+                vec.push_back({maxFirst, minSecond});
+            
+            if(leftSecond < rightSecond)
+                l++;
+            else if (leftSecond == rightSecond){
+                r++; l++;
+            } else
+                r++;
+        }
+
+    return vec;
+    }
+};
