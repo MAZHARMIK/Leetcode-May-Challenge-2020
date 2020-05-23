@@ -7,7 +7,6 @@ public:
 
         int l = 0;  int leftSize  = left.size();
         int r = 0;  int rightSize = right.size();
-        int v = 0;
 
          while(l<leftSize && r<rightSize){
             int leftFirst   = left[l][0];
