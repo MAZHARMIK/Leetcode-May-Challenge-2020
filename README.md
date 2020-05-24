@@ -103,5 +103,9 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
 			  <td>Interval List Intersections</td>
         <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Interval%20List%20Intersections%20(C%2B%2B)"><img src="https://www.math-only-math.com/images/intersection-of-sets-using-Venn-diagram.png" width="400" height="150"></a></td>
 			</tr>
+			<tr>
+			  <td>Construct Binary Search Tree from Preorder Traversal</td>
+        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Construct%20Binary%20Search%20Tree%20from%20Preorder%20Traversal%20(C%2B%2B)"><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/BSTSearch.png" width="400" height="150"></a></td>
+			</tr>
 		</tbody>
 </table>
