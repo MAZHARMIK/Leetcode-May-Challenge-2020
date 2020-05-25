@@ -1,0 +1,30 @@
+//Time complexity : O(n)
+class Solution {
+public:
+    TreeNode* bstFromPreorder(vector<int>& preorder) {
+        if(preorder.size() == 0)
+            return NULL;
+        struct TreeNode* root = new TreeNode(preorder[0]);
+        if(preorder.size() == 1)
+            return root;
+        
+        return buildTree(root, preorder, 0, preorder.size()-1);
+    }
+    
+    TreeNode* buildTree(TreeNode* root, vector<int> preorder, int left, int right){
+        if(left > right)
+            return NULL;
+        
+        if(root==NULL)
+            root = new TreeNode(preorder[left]);
+        int newLeft = left;
+        for(int i = newLeft+1; i<= right; i++){
+            if(preorder[i] < preorder[left])
+                newLeft++;
+        }
+        
+        root->left  = buildTree(root->left, preorder, left+1, newLeft);
+        root->right = buildTree(root->right, preorder, newLeft+1, right);
+        return root;
+    }
+};
