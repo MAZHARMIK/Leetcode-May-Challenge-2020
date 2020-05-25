@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int maxUClines(vector<int>& A, int i, vector<int>& B, int j, vector<vector<int>>& t){
+        if(i==A.size() || j==B.size()) return 0;
+        if(t[i][j] != -1) return t[i][j];
+        int count = 0;
+        if(A[i] == B[j]) {
+            count = 1 + maxUClines(A, i+1, B, j+1, t);
+        } else {
+            count = max(maxUClines(A, i, B, j+1, t), maxUClines(A, i+1, B, j, t));
+        }
+        t[i][j] = count;
+        return count;
+    }
+    int maxUncrossedLines(vector<int>& A, vector<int>& B) {
+        vector<vector<int>> t(A.size(), vector<int>(B.size(), -1));
+        return maxUClines(A, 0, B, 0, t);
+    }
+};
