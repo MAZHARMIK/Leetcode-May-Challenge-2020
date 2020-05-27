@@ -1,0 +1,33 @@
+class Solution {
+public:
+   bool possibleBipartition(int N, vector<vector<int>>& dislikes) {
+        if(dislikes.size() == 0 || dislikes.size() == 1)
+            return true;
+        return checkForBipartite(N, dislikes);
+    }
+     bool Checking_Util(vector<vector<int>>& graph_list, vector<int>& total_people, int v, int grp){
+        if(total_people[v] == -1) total_people[v] = grp;
+        else{
+            return total_people[v] == grp;
+        }
+        
+        for(int n: graph_list[v]){
+            if(!Checking_Util(graph_list, total_people, n, 1-grp))
+                return false;
+        }
+        return true;
+    }
+    bool checkForBipartite(int N, vector<vector<int>>& dislikes){
+        vector<int> total_people(N, -1);
+        vector<vector<int>> graph_list(N, vector<int>());
+        for(vector<int>& pair: dislikes){
+            graph_list[pair[0]-1].push_back(pair[1]-1);
+            graph_list[pair[1]-1].push_back(pair[0]-1);
+        }
+        for(int i = 0; i<N; ++i){
+            if(total_people[i] == -1 && !Checking_Util(graph_list, total_people, i, 0))
+                return false;
+        }
+        return true;
+    }
+};
