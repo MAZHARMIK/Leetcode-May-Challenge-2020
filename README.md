@@ -119,5 +119,9 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
 			  <td>Possible Bipartition</td>
         <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Possible%20Bipartition%20(C%2B%2B)"><img src="https://study.com/cimages/multimages/16/bipartite4.jpg" width="400" height="150"></a></td>
 			</tr>
+			<tr>
+			  <td>Counting Bits</td>
+        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Counting%20Bits%20(C%2B%2B)"><img src="https://d2r5da613aq50s.cloudfront.net/wp-content/uploads/402174.image0.jpg" width="400" height="150"></a></td>
+			</tr>
 		</tbody>
 </table>
