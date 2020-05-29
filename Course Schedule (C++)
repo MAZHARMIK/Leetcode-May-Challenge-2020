@@ -1,0 +1,41 @@
+class Solution {
+public:
+    void updateMyQueue(int numCourses, queue <int>& my_queue, vector<int> frequency){
+        for(int i = 0; i<numCourses; i++){
+            if(frequency[i] == 0)
+                my_queue.push(i);
+        }
+    }
+    
+    int sumCourses(queue <int>& my_queue, vector<int> frequency, map<int, vector<int>> my_map){
+        int sum = 0;
+        while(!my_queue.empty()){
+            int current = my_queue.front();
+            my_queue.pop();
+            for(int i:my_map[current]){
+                if(--frequency[i]==0){
+                    my_queue.push(i);
+                }
+            }
+            sum++;
+        }
+        return sum;
+    }
+    
+    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+        map<int, vector<int>> my_map;
+        queue <int> my_queue;
+        vector<int> frequency(numCourses);
+        
+        for(int i = 0; i<prerequisites.size(); i++){
+            my_map[prerequisites[i][0]].push_back(prerequisites[i][1]) ;
+            frequency[prerequisites[i][1]]++;
+        }
+        
+        updateMyQueue(numCourses, my_queue, frequency);
+        
+        int sum = sumCourses(my_queue, frequency, my_map);
+        if(sum == numCourses) return true;
+        return false;
+    }
+};
