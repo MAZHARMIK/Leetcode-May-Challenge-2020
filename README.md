@@ -131,5 +131,9 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
 			  <td>K Closest Points to Origin</td>
         <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/K%20Closest%20Points%20to%20Origin%20(C%2B%2B)"><img src="https://www.varsitytutors.com/assets/vt-hotmath-legacy/hotmath_help/topics/shortest-distance-between-a-point-and-a-circle/image1.gif" width="400" height="150"></a></td>
 			</tr>
+			<tr>
+			  <td>Edit Distance</td>
+        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Edit%20Distance%20(C%2B%2B)"><img src="https://www.ideserve.co.in/learn/img/editDistance_0.gif" width="400" height="150"></a></td>
+			</tr>
 		</tbody>
 </table>
