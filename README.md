@@ -135,5 +135,9 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
 			  <td>Edit Distance</td>
         <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Edit%20Distance%20(C%2B%2B)"><img src="https://www.ideserve.co.in/learn/img/editDistance_0.gif" width="400" height="150"></a></td>
 			</tr>
+			<tr>
+			  <td>Invert Binary Tree</td>
+        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Invert%20Binary%20Tree%20(C%2B%2B)"><img src="https://www.techiedelight.com/wp-content/uploads/invert-binary-tree.png" width="400" height="150"></a></td>
+			</tr>
 		</tbody>
 </table>
