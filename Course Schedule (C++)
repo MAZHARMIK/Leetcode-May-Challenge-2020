@@ -1,3 +1,8 @@
+/*
+    Company Tags  : Accolite, Amazon, Flipkart, Microsoft, Moonfrog Labs, OYO Rooms
+    Leetcode Link : https://leetcode.com/problems/course-schedule/
+*/
+
 class Solution {
 public:
     //we will use Kahn's Algorithm "Topological Sort using BFS"
