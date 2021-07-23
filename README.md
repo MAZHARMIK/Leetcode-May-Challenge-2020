@@ -125,7 +125,7 @@ Link to the contest : <a href="https://leetcode.com/explore/challenge/card/may-l
 			</tr>
 			<tr>
 			  <td>Course Schedule</td>
-        <td><a href="https://github.com/MAZHARMIK/Leetcode-May-Challenge-2020/blob/master/Course%20Schedule%20(C%2B%2B)"><img src="https://algorithms.tutorialhorizon.com/files/2018/03/Topological-Sort.png" width="400" height="150"></a></td>
+        <td><a href="https://github.com/MAZHARMIK/Interview_DS_Algo/blob/master/Graph/Topological%20Sorting/Course%20Schedule.cpp"><img src="https://algorithms.tutorialhorizon.com/files/2018/03/Topological-Sort.png" width="400" height="150"></a></td>
 			</tr>
 			<tr>
 			  <td>K Closest Points to Origin</td>
